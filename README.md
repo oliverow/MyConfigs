@@ -1,4 +1,21 @@
 # Steps
+
+## If zsh not present
+`brew install zsh`
+
+`zsh`
+
+## Install oh my zsh
+`sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+## Install powerline 10k
+`git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+
+Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
+
+## (Optional) if powerline 10k symbols are not showing, install fonts
+Follow [this official guide](https://github.com/romkatv/powerlevel10k#fonts)
+
 ## Vim
 `cp MyConfig/.vimrc ~/`
 
