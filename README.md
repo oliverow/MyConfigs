@@ -32,6 +32,9 @@ if tmux version < 2.9, use `.tmux.conf.legacy`
 
 on latest mac, hold `fn` key while selecting with mouse to copy
 
+## Rectangle
+`brew install --cask rectangle`
+
 # SSH
 vi ~/.ssh/authorized_keys
 copy finger print over
