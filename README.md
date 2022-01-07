@@ -21,7 +21,7 @@ Follow [this official guide](https://github.com/romkatv/powerlevel10k#fonts)
 
 `git submodule update --init`
 
-`cp MyConfig/base-16-color/\*.vim ~/.vim/color/`
+`cp MyConfig/base-16-color/\*.vim ~/.vim/colors/`
 
 for 256 color, check out [here](https://github.com/chriskempson/vim-tomorrow-theme/tree/master/colors)
 
