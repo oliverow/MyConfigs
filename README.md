@@ -1,4 +1,4 @@
-# Steps
+# Terminal
 
 ## If zsh not present
 `brew install zsh`
@@ -31,6 +31,25 @@ for 256 color, check out [here](https://github.com/chriskempson/vim-tomorrow-the
 if tmux version < 2.9, use `.tmux.conf.legacy`
 
 on latest mac, hold `fn` key while selecting with mouse to copy
+
+## [fzf](https://github.com/junegunn/fzf)
+`brew install fzf`
+
+`$(brew --prefix)/opt/fzf/install`
+
+Then add the following to `zshrc`
+
+```
+## fzf setup
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_COMPLETION_TRIGGER='--'
+```
+
+## [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+Follow the installation instruction from [here](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+
+
+# Mac
 
 ## Rectangle
 `brew install --cask rectangle`
