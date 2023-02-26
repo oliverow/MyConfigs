@@ -1,0 +1,23 @@
+space="===================="
+
+echo $space
+echo "Welcome Oliver!"
+echo $space
+
+# brew
+PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin
+
+# TeX
+PATH=$PATH:/Library/TeX/texbin
+
+# set default conda env to dev
+conda activate dev
+
+# tmux reminder
+echo "Remember to always work in tmux\nCurrent active session:"
+tmux ls
+echo $space
+
+# fzf setup
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_COMPLETION_TRIGGER='--'
