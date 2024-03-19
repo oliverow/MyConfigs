@@ -11,7 +11,9 @@
 ## Install powerline 10k
 `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
 
-Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
+Set ZSH_THEME="powerlevel10k/powerlevel10k" in `~/.zshrc`.
+
+`echo "source ~/.zshrc.pre-oh-my-zsh" >> ~/.zshrc`
 
 ## (Optional) if powerline 10k symbols are not showing, install fonts
 Follow [this official guide](https://github.com/romkatv/powerlevel10k#fonts)
@@ -20,10 +22,12 @@ Follow [this official guide](https://github.com/romkatv/powerlevel10k#fonts)
 `cp MyConfig/.vimrc ~/`
 
 `pushd MyConfig`
+
 `git submodule update --init`
+
 `popd`
 
-`cp MyConfig/base-16-color/\*.vim ~/.vim/colors/`
+`cp -r MyConfigs/base16-vim/colors ~/.vim/colors`
 
 for 256 color, check out [here](https://github.com/chriskempson/vim-tomorrow-theme/tree/master/colors)
 
