@@ -19,7 +19,9 @@ Follow [this official guide](https://github.com/romkatv/powerlevel10k#fonts)
 ## Vim
 `cp MyConfig/.vimrc ~/`
 
+`pushd MyConfig`
 `git submodule update --init`
+`popd`
 
 `cp MyConfig/base-16-color/\*.vim ~/.vim/colors/`
 
