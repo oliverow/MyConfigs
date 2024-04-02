@@ -1,0 +1,31 @@
+space="===================="
+
+echo $space
+echo "Welcome Oliver!"
+echo $space
+
+# alias
+alias gpus="watch -n 0.2 nvidia-smi"
+alias gwatch="~/scripts/monitor_gpus.sh"
+
+# add scripts
+export PATH=$PATH:~/scripts
+
+# set default conda env to dev
+conda activate dev
+
+# tmux reminder
+echo "Always work in tmux"
+echo "Current active session:"
+tmux ls
+echo $space
+
+if tmux has-session; then
+  tmux attach-session
+else
+  tmux
+fi
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_COMPLETION_TRIGGER='--'
