@@ -32,11 +32,27 @@ Follow [this official guide](https://github.com/romkatv/powerlevel10k#fonts)
 for 256 color, check out [here](https://github.com/chriskempson/vim-tomorrow-theme/tree/master/colors)
 
 ## tmux
+
+### If tmux not present
+`brew install tmux`
+
+### Copy over configurations
+
 `cp MyConfig/.tmux.conf ~/`
 
 if tmux version < 2.9, use `.tmux.conf.legacy`
 
 on latest mac, hold `fn` key while selecting with mouse to copy
+
+### Install tmux plugin manager
+
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+
+### Install tmux plugins
+
+Inside `tmux` session, enter `prefix + I`
+
+This will install `tmux-resurrect`
 
 ## [fzf](https://github.com/junegunn/fzf)
 `brew install fzf`
