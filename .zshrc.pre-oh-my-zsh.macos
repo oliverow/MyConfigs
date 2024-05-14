@@ -13,11 +13,18 @@ PATH=$PATH:/Library/TeX/texbin
 # set default conda env to dev
 conda activate dev
 
-# tmux reminder
-echo "Remember to always work in tmux\nCurrent active session:"
-tmux ls
-echo $space
-
 # fzf setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_COMPLETION_TRIGGER='--'
+
+# tmux reminder
+echo "Always work in tmux"
+echo "Current active session:"
+tmux ls
+echo $space
+
+if tmux has-session; then
+  tmux attach-session
+else
+  tmux
+fi
