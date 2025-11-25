@@ -4,15 +4,19 @@ echo $space
 echo "Welcome Oliver!"
 echo $space
 
+# update this home if working on /data disk
+home="~"
+
 # alias
 alias gpus="watch -n 0.2 nvidia-smi"
 alias gwatch="~/scripts/monitor_gpus.sh"
+alias nvitop="uvx nvitop"
 
 # add scripts
 export PATH=$PATH:~/scripts
 
 # set default conda env to dev
-conda activate dev
+# conda activate dev (depreciated to prefer uv)
 
 # tmux reminder
 echo "Always work in tmux"
@@ -29,3 +33,7 @@ fi
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_COMPLETION_TRIGGER='--'
+
+# set cache dirs                                                                                                                                                                                                                                                                                                        
+export UV_CACHE_DIR=$home/.cache/uv                                                                                                                                                                                                                                                                                     
+export HF_HOME=$home/.cache/huggingface
