@@ -54,6 +54,14 @@ Inside `tmux` session, enter `prefix + I`
 
 This will install `tmux-resurrect`
 
+## Node
+
+Install from [official site](https://nodejs.org/en/download/)
+
+## UV
+
+Install from [official site](https://docs.astral.sh/uv/getting-started/installation/)
+
 ## [fzf](https://github.com/junegunn/fzf)
 `brew install fzf`
 
