@@ -1,8 +1,6 @@
-# Terminal
+# General
 
 ## If zsh not present
-`brew install zsh`
-
 `zsh`
 
 ## Install oh my zsh
@@ -62,6 +60,10 @@ Install from [official site](https://nodejs.org/en/download/)
 
 Install from [official site](https://docs.astral.sh/uv/getting-started/installation/)
 
+## [nvitop](https://github.com/XuehaiPan/nvitop)
+
+`uvx nvitop`
+
 ## [fzf](https://github.com/junegunn/fzf)
 `brew install fzf`
 
@@ -84,6 +86,7 @@ Follow the installation instruction from [here](https://github.com/zsh-users/zsh
 ## Rectangle
 `brew install --cask rectangle`
 
+
 # SSH
-vi ~/.ssh/authorized_keys
-copy finger print over
+On endpoint1: `cat ~/.ssh/*.pub`
+On endpoint2: `echo <key> >> ~/.ssh/authorized_keys`
