@@ -26,36 +26,16 @@
       "Bash(nvcc:*)",
       "Bash(nvidia-smi:*)",
       "Bash(curl:*)",
-      "Bash(git clone:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git status:*)",
-      "Bash(git push:*)",
-      "Bash(git pull:*)",
-      "Bash(git checkout:*)",
+      "Bash(git:*)",
       "Bash(uv:*)",
       "Bash(/home/oliver/.local/bin/uv:*)",
+      "Bash(*/home/oliver/.local/bin/uv run python *)",
       "mcp__claude_ai_Notion__notion-search",
       "mcp__claude_ai_Notion__notion-fetch",
       "mcp__claude_ai_Notion__notion-update-page",
       "mcp__claude_ai_Notion__notion-create-pages",
       "mcp__claude_ai_Notion__notion-create-comment",
-      "Bash(CUDA_VISIBLE_DEVICES=*:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=0 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=1 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=2 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=3 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=4 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=5 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=6 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=7 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=7,6 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=6,5 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=5,4 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=4,3 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=3,2 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=2,1 /home/oliver/.local/bin/uv run python:*)",
-      "Bash(CUDA_VISIBLE_DEVICES=1,0 /home/oliver/.local/bin/uv run python:*)"
+      "Bash(notify-send Claude Code:*)"
     ],
     "deny": [],
     "ask": [
@@ -78,6 +58,17 @@
           }
         ]
       }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/scripts/claude-notify.sh 'Moshimoshi'"
+          }
+        ]
+      }
     ]
   },
   "statusLine": {
@@ -90,8 +81,8 @@
     "context7@claude-plugins-official": true
   },
   "outputStyle": "default",
+  "spinnerTipsEnabled": true,
   "autoUpdatesChannel": "latest",
   "autoMemoryEnabled": true,
-  "effortLevel": "medium",
-  "spinnerTipsEnabled": true
+  "effortLevel": "medium"
 }
