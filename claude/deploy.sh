@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
+# Deploy: copies files FROM this repo TO ~/.claude
+# Update: copies files FROM ~/.claude TO this repo (reverse direction)
+#
+# Tracked files (keep in sync with FILES and NESTED below):
+#   settings.json  keybindings.json  CLAUDE.md  statusline-command.sh
+#   agents/code-reviewer.md
+#   scripts/fix-mcp-gate.sh  scripts/claude-notify.sh
+#
+# To update this repo after editing ~/.claude:
+#   cp ~/.claude/{settings.json,keybindings.json,CLAUDE.md,statusline-command.sh} ~/.myconfig/claude/
+#   cp ~/.claude/agents/code-reviewer.md ~/.myconfig/claude/agents/
+#   cp ~/.claude/scripts/{fix-mcp-gate.sh,claude-notify.sh} ~/.myconfig/claude/scripts/
 set -euo pipefail
 
 SRC="$(cd "$(dirname "$0")" && pwd)"
@@ -9,7 +21,7 @@ mkdir -p "$BACKUP/agents" "$BACKUP/scripts"
 mkdir -p "$DEST/agents" "$DEST/scripts"
 
 FILES="settings.json keybindings.json CLAUDE.md statusline-command.sh"
-NESTED="agents/code-reviewer.md scripts/fix-mcp-gate.sh"
+NESTED="agents/code-reviewer.md scripts/fix-mcp-gate.sh scripts/claude-notify.sh"
 
 for f in $FILES $NESTED; do
   [ -f "$DEST/$f" ] && cp "$DEST/$f" "$BACKUP/$f"
