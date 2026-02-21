@@ -1,0 +1,97 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Bash(for:*)",
+      "Bash(do:*)",
+      "Bash(done:*)",
+      "Bash(chmod:*)",
+      "Bash(cat:*)",
+      "Bash(echo:*)",
+      "Bash(export:*)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(jq:*)",
+      "Bash(sleep:*)",
+      "Bash(ps:*)",
+      "Bash(nvcc:*)",
+      "Bash(nvidia-smi:*)",
+      "Bash(curl:*)",
+      "Bash(git clone:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git status:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git checkout:*)",
+      "Bash(uv:*)",
+      "Bash(/home/oliver/.local/bin/uv:*)",
+      "mcp__claude_ai_Notion__notion-search",
+      "mcp__claude_ai_Notion__notion-fetch",
+      "mcp__claude_ai_Notion__notion-update-page",
+      "mcp__claude_ai_Notion__notion-create-pages",
+      "mcp__claude_ai_Notion__notion-create-comment",
+      "Bash(CUDA_VISIBLE_DEVICES=*:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=0 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=1 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=2 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=3 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=4 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=5 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=6 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=7 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=7,6 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=6,5 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=5,4 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=4,3 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=3,2 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=2,1 /home/oliver/.local/bin/uv run python:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=1,0 /home/oliver/.local/bin/uv run python:*)"
+    ],
+    "deny": [],
+    "ask": [
+      "Bash(rm:*)",
+      "Bash(rm -rf:*)"
+    ],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/scripts/fix-mcp-gate.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "commit-commands@claude-plugins-official": true,
+    "astral@astral-sh": true,
+    "context7@claude-plugins-official": true
+  },
+  "outputStyle": "default",
+  "autoUpdatesChannel": "latest",
+  "autoMemoryEnabled": true,
+  "effortLevel": "medium",
+  "spinnerTipsEnabled": true
+}
