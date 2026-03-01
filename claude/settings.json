@@ -27,24 +27,25 @@
       "Bash(nvidia-smi:*)",
       "Bash(curl:*)",
       "Bash(git:*)",
-      "Bash(uv:*)",
-      "Bash(/home/oliver/.local/bin/uv:*)",
-      "Bash(*/home/oliver/.local/bin/uv run python *)",
-      "mcp__claude_ai_Notion__notion-search",
-      "mcp__claude_ai_Notion__notion-fetch",
-      "mcp__claude_ai_Notion__notion-update-page",
-      "mcp__claude_ai_Notion__notion-create-pages",
-      "mcp__claude_ai_Notion__notion-create-comment",
-      "Bash(notify-send Claude Code:*)"
+      "Bash(*uv *)",
+      "Bash(*/home/oliver/.local/bin/uv *)",
+      "mcp__claude_ai_Notion__*",
+      "mcp__claude_ai_Hugging_Face*"
     ],
-    "deny": [],
+    "deny": [
+      "Bash(git -C:*)",
+      "Bash(*&&*)"
+    ],
     "ask": [
       "Bash(rm:*)",
-      "Bash(rm -rf:*)"
+      "Bash(rm -rf:*)",
+      "Bash(git rm:*)",
+      "Bash(git reset --hard)",
+      "Bash(git push)"
     ],
     "defaultMode": "acceptEdits",
     "additionalDirectories": [
-      "/tmp"
+      "/tmp/"
     ]
   },
   "hooks": {
@@ -76,13 +77,11 @@
     "command": "bash ~/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
-    "commit-commands@claude-plugins-official": true,
     "astral@astral-sh": true,
     "context7@claude-plugins-official": true
   },
   "outputStyle": "default",
   "spinnerTipsEnabled": true,
   "autoUpdatesChannel": "latest",
-  "autoMemoryEnabled": true,
-  "effortLevel": "medium"
+  "autoMemoryEnabled": true
 }
