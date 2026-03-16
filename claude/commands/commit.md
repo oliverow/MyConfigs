@@ -24,6 +24,7 @@ Review the pending changes and prepare a commit proposal for user approval.
 - Group related changes together
 - Flag any files that look unrelated to the current work (e.g., unintended changes, debug artifacts)
 - Flag any files that should NOT be committed (secrets, local config, build artifacts)
+- use code-reviewer agent to perfect the diff and ensure every changed line is intentional and traceable to the task
 
 ### Step 2: Propose Commit
 

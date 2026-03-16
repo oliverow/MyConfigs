@@ -39,6 +39,25 @@ Log each event as a high-level summary on the task (e.g., "Attempted A, hit B is
 1. Update the task status to **"Verify"** (never "Done")
 2. Add a comment summarizing what was done
 
+## Project Tracker Updates
+
+Projects on Notion have a **Progress Tracker** — a concise ramp-up dashboard with a priority stack, research directions database, and decision log. When updating a Notion task, assess whether the change shifts the project narrative.
+
+**Update the tracker when something changes the story:**
+- Surprising or unexpected results that challenge assumptions
+- A direction was invalidated or a new one emerged
+- A key decision or pivot was made
+- A blocker was hit or resolved
+- Priorities need reordering based on new information
+
+**Do NOT update the tracker when:** results are as expected, routine progress doesn't change the project-level picture, or work is incremental within an established direction.
+
+**How to update:**
+- Keep the priority stack concise — update status and next steps, don't expand prose
+- Add Decision Log entries for pivots, key results, insights, and dead ends
+- Update Research Directions database status and "Next Step" field
+- If a priority was resolved, remove or demote it; if a new one emerged, slot it in
+
 ## Finding the Right Page
 
 - Many projects have a Notion page (often stored in project memory). If unsure which one, ask the user.

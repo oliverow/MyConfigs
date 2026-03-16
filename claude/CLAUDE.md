@@ -4,6 +4,7 @@
 **Don't assume. Don't hide confusion. Surface tradeoffs.**
 - Be concise. Skip summaries for simple tasks.
 - Be critical — flag issues, question assumptions, push back whenever you spot concerns.
+- Ask questions whenever anything is unclear. Don't guess silently.
 
 Before implementing:
 - State your assumptions explicitly. If uncertain, ask.
@@ -33,25 +34,35 @@ Before implementing:
 - Remove imports/variables/functions that YOUR changes made unused. Don't remove pre-existing dead code unless asked.
 - Respect existing codebase. Reuse existing code. Do not write tests unless explicitly asked.
 - The test: Every changed line should trace directly to the user's request.
+- When facing cases not covered by instructions, do not catch and handle them silently. Instead, raise exceptions in code and ask for clarification.
 
 ## Tooling
-- Never call `python3` directly and always choose uv instead (e.g., `uv run python` instead of `python`). uv path: `/home/oliver/.local/bin/uv`. When unsure, call tool `/astral:uv` for docs.
+- Never call `python3` directly and always choose uv instead (e.g., `uv run python` instead of `python`). When unsure, call tool `/astral:uv` for docs.
 - Always confirm with me before installing new tools or libraries.
 - Use `/commit` to propose commits. Do not commit directly.
+- Always use native Claude tools, such as Read(), Search(), and Write(), over bash equivalents whenever possible.
+
+## Session Management
+- After the first exchange, use `/rename` to give the session a short, descriptive name (2-4 words) based on the topic. Do this silently without asking.
 
 ## Execution
-- Do not compound commands using &&. E.g., if you want to execute `pwd && ls`, run two separate commands `pwd` and then `ls`.
+- Do not stack commands. Do not compound commands using &&. E.g., if you want to execute `pwd && ls`, run two separate commands `pwd` and then `ls`.
 - Before `cd`, check if you are already in the correct directory.
+- Do not execute multiline inline python or bash commands. Write and execute a temporary script file under `/tmp` instead.
 
 ## Workspace Discipline
 - Do not include CLAUDE.md in git.
 - Do not update README.md or other documentation files unless told to.
 - Do not try to operate outside the project workspace without stating your reason.
+- No need to clean up files in `/tmp`.
 
 ## Notion
 - When I say "task", I likely mean a Notion task. See `notion-task` skill for the full workflow (creation, progress logging, completion).
 - Check Notion for project-specific context when relevant. Ask me if unsure which page.
 - When you find a project's Notion page for the first time, bookmark it in the project CLAUDE.md for future reference.
+
+## Context Updates
+- At milestones (task completion, bug fix, design decision, approach change, blocker, surprising results), invoke the `update-context` skill to update all context sources.
 
 ## Devlog
 - After completing tasks, consider using `/devlog` to log bugs fixed, decisions, and design choices.

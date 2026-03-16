@@ -1,47 +1,59 @@
 {
   "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "95"
   },
   "permissions": {
     "allow": [
       "WebSearch",
       "WebFetch",
-      "Bash(for:*)",
-      "Bash(do:*)",
-      "Bash(done:*)",
-      "Bash(chmod:*)",
-      "Bash(cat:*)",
-      "Bash(echo:*)",
-      "Bash(export:*)",
-      "Bash(ls:*)",
-      "Bash(wc:*)",
-      "Bash(head:*)",
-      "Bash(tail:*)",
-      "Bash(tree:*)",
-      "Bash(find:*)",
-      "Bash(grep:*)",
-      "Bash(jq:*)",
-      "Bash(sleep:*)",
-      "Bash(ps:*)",
-      "Bash(nvcc:*)",
-      "Bash(nvidia-smi:*)",
-      "Bash(curl:*)",
-      "Bash(git:*)",
-      "Bash(*uv *)",
-      "Bash(*/home/oliver/.local/bin/uv *)",
+      "Bash(cat *)",
+      "Bash(echo *)",
+      "Bash(export *)",
+      "Bash(ls)",
+      "Bash(ls *)",
+      "Bash(wc *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(tree)",
+      "Bash(tree *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(jq *)",
+      "Bash(sleep *)",
+      "Bash(ps)",
+      "Bash(ps *)",
+      "Bash(chmod +x *)",
+      "Bash(nvcc *)",
+      "Bash(nvidia-smi)",
+      "Bash(nvidia-smi *)",
+      "Bash(curl *)",
+      "Bash(git *)",
+      "Bash(*python *)",
+      "Bash(* *python *)",
+      "Bash(uv *)",
+      "Bash(* uv *)",
+      "Bash(huggingface-cli *)",
       "mcp__claude_ai_Notion__*",
-      "mcp__claude_ai_Hugging_Face*"
+      "mcp__claude_ai_Hugging_Face*",
+      "Skill",
+      "Bash(bash /tmp/*)",
+      "Bash(rm /tmp/*)"
     ],
     "deny": [
-      "Bash(git -C:*)",
-      "Bash(*&&*)"
+      "Bash(uv run python -c *)"
     ],
     "ask": [
-      "Bash(rm:*)",
-      "Bash(rm -rf:*)",
-      "Bash(git rm:*)",
+      "Bash(rm *)",
+      "Bash(* rm *)",
+      "Bash(rm -rf *)",
+      "Bash(chmod *)",
+      "Bash(git -C *)",
+      "Bash(git rm *)",
       "Bash(git reset --hard)",
-      "Bash(git push)"
+      "Bash(git reset --hard *)",
+      "Bash(git push)",
+      "Bash(git push *)"
     ],
     "defaultMode": "acceptEdits",
     "additionalDirectories": [
@@ -78,10 +90,16 @@
   },
   "enabledPlugins": {
     "astral@astral-sh": true,
-    "context7@claude-plugins-official": true
+    "context7@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true
   },
   "outputStyle": "default",
   "spinnerTipsEnabled": true,
+  "effortLevel": "medium",
   "autoUpdatesChannel": "latest",
+  "minimumVersion": "2.1.63",
+  "voiceEnabled": true,
   "autoMemoryEnabled": true
 }
