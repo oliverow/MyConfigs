@@ -32,12 +32,17 @@ As you work on the task, log progress on the Notion task whenever a lifecycle ev
 - Discussed alternatives with the user
 - Changed approach
 
-Log each event as a high-level summary on the task (e.g., "Attempted A, hit B issue, discussed C with user, pivoting to D"). Keep it concise but traceable — someone reading the task later should understand the journey.
+Log each event as a **comment** on the task (e.g., "Attempted A, hit B issue, discussed C with user, pivoting to D"). Comments have a built-in timeline, making them ideal for intermediate progress. Keep it concise but traceable.
+
+**Important:** Do not update the task's main content with temporary progress or intermediate checkpoints. The main content should only contain conclusive information — final results, decisions, and specs. Use comments for everything in-progress.
+
+When logging experiment results (e.g., accuracy, metrics), always format as a **table** for easy comparison.
 
 ## When Completing a Notion Task
 
 1. Update the task status to **"Verify"** (never "Done")
-2. Add a comment summarizing what was done
+2. **Update the page content** with results, findings, and conclusions — append a "## Results" section (or fill in the deliverables section if one exists). The page body is the permanent record; anyone reading the task later should find the outcomes inline, not have to dig through comments.
+3. Add a brief comment noting completion (e.g., "Results added, moving to Verify") — comments are for status updates and discussion, not for housing results.
 
 ## Project Tracker Updates
 

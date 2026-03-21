@@ -34,7 +34,7 @@ Before implementing:
 - Remove imports/variables/functions that YOUR changes made unused. Don't remove pre-existing dead code unless asked.
 - Respect existing codebase. Reuse existing code. Do not write tests unless explicitly asked.
 - The test: Every changed line should trace directly to the user's request.
-- When facing cases not covered by instructions, do not catch and handle them silently. Instead, raise exceptions in code and ask for clarification.
+- When facing cases not covered by instructions, do not catch and handle them gracefully. Instead, raise exceptions to crash code and ask for clarification.
 
 ## Tooling
 - Never call `python3` directly and always choose uv instead (e.g., `uv run python` instead of `python`). When unsure, call tool `/astral:uv` for docs.
@@ -48,7 +48,7 @@ Before implementing:
 ## Execution
 - Do not stack commands. Do not compound commands using &&. E.g., if you want to execute `pwd && ls`, run two separate commands `pwd` and then `ls`.
 - Before `cd`, check if you are already in the correct directory.
-- Do not execute multiline inline python or bash commands. Write and execute a temporary script file under `/tmp` instead.
+- Do not execute multiline inline python or bash commands. Write using Write() tool and execute a temporary script file under `/tmp` instead.
 
 ## Workspace Discipline
 - Do not include CLAUDE.md in git.
@@ -67,3 +67,5 @@ Before implementing:
 ## Devlog
 - After completing tasks, consider using `/devlog` to log bugs fixed, decisions, and design choices.
 - Check `.claude/DEVLOG.md` for prior context before starting work.
+
+# Make sure you memorize each one of these preferences!

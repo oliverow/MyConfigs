@@ -1,6 +1,6 @@
 ---
 name: gpu-management
-description: Use when about to run any command on GPU, including training, inference, CUDA operations, or any command that uses CUDA_VISIBLE_DEVICES. Handles GPU selection, OOM recovery, and resource limits.
+description: Use when about to run any command on GPU, including training, inference, CUDA operations, or any command that uses CUDA_VISIBLE_DEVICES, or encountering OOM issue. Handles GPU selection, OOM recovery, and resource limits.
 user-invocable: false
 ---
 
@@ -10,8 +10,9 @@ user-invocable: false
 
 1. Run `nvidia-smi` to check available GPUs
 2. Identify free GPUs (low utilization and memory usage)
-3. Select GPUs starting from the **highest index** down to lowest
-4. Set `CUDA_VISIBLE_DEVICES` accordingly
+3. Identify GPUs occupied by my own processes (if any) and consider reusing them if they have enough free memory
+4. Select GPUs starting from the **highest index** down to lowest
+5. Set `CUDA_VISIBLE_DEVICES` accordingly
 
 ## On OOM Error
 
@@ -21,5 +22,5 @@ user-invocable: false
 
 ## Hard Limits
 
-- Never occupy more than **6 GPUs** without explicit user permission
-- If all GPUs are busy, **ask the user** for instructions — do not wait or retry in a loop
+- My account can only use **up to only 6 GPUs across all of my processes** without explicit user permission
+- If all GPUs are busy or my user account processes is already using up to 6 GPUs, **ask the me** for instructions

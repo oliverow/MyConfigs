@@ -23,6 +23,12 @@ Read the `FILES` and `NESTED` lists from `deploy.sh` to determine which files to
 
 If new files were found that aren't in deploy.sh, update deploy.sh to include them (add to NESTED list, update the mkdir and comment block).
 
+### Step 2.5: Scrub sensitive values
+
+After copying, sanitize any secrets in the `~/.myconfig/claude` copy before committing:
+- In `scripts/notify.sh`: replace the TOPIC value with `"REDACTED"`
+- If other files contain API keys, tokens, or channel names, redact them too
+
 ### Step 3: Diff and confirm
 
 Show the user `git diff` in `~/.myconfig` so they can review what changed. Ask for confirmation before committing.

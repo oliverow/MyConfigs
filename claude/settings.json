@@ -33,6 +33,7 @@
       "Bash(* *python *)",
       "Bash(uv *)",
       "Bash(* uv *)",
+      "Bash(CUDA_VISIBLE_DEVICES=*)",
       "Bash(huggingface-cli *)",
       "mcp__claude_ai_Notion__*",
       "mcp__claude_ai_Hugging_Face*",
