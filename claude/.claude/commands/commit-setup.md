@@ -26,7 +26,7 @@ If new files were found that aren't in deploy.sh, update deploy.sh to include th
 ### Step 2.5: Scrub sensitive values
 
 After copying, sanitize any secrets in the `~/.myconfig/claude` copy before committing:
-- In `scripts/notify.sh`: replace the TOPIC value with `"REDACTED"`
+- In `scripts/ntfy-notify.sh`: replace the TOPIC value with `"REDACTED"`
 - If other files contain API keys, tokens, or channel names, redact them too
 
 ### Step 3: Diff and confirm
