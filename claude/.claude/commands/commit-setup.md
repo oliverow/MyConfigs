@@ -13,11 +13,11 @@ First, read the deploy script and check repo status:
 
 ## Instructions
 
-Sync tracked Claude config files from `~/.claude` to `~/.myconfig/claude` and commit.
+Sync tracked Claude config files from `~/.claude` to `~/.myconfig/claude` using a script and commit.
 
 ### Step 1: Copy files
 
-Read the `FILES` and `NESTED` lists from `deploy.sh` to determine which files to sync. Copy each from `~/.claude` to `~/.myconfig/claude`, creating directories as needed. Also sync any new files that exist in `~/.claude` matching the tracked patterns (skills, commands, agents, scripts) but aren't yet in deploy.sh.
+Read the `FILES` and `NESTED` lists from `deploy.sh` to determine which files to sync. Create a script in /tmp to copy each from `~/.claude` to `~/.myconfig/claude`, creating directories as needed. Also sync any new files that exist in `~/.claude` matching the tracked patterns (skills, commands, agents, scripts) but aren't yet in deploy.sh.
 
 ### Step 2: Check for new files
 

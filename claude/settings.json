@@ -35,11 +35,13 @@
       "Bash(* uv *)",
       "Bash(CUDA_VISIBLE_DEVICES=*)",
       "Bash(huggingface-cli *)",
-      "mcp__claude_ai_Notion__*",
-      "mcp__claude_ai_Hugging_Face*",
-      "Skill",
       "Bash(bash /tmp/*)",
-      "Bash(rm /tmp/*)"
+      "Bash(rm /tmp/*)",
+      "Skill",
+      "mcp__claude_ai_Notion__*",
+      "mcp__claude_ai_Hugging_Face__*",
+      "mcp__plugin_discord_discord__reply",
+      "Bash(/home/oliver/.claude/scripts/ntfy-notify.sh *)"
     ],
     "deny": [
       "Bash(uv run python -c *)"
@@ -94,7 +96,8 @@
     "context7@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
-    "claude-md-management@claude-plugins-official": true
+    "claude-md-management@claude-plugins-official": true,
+    "discord@claude-plugins-official": true
   },
   "outputStyle": "default",
   "spinnerTipsEnabled": true,

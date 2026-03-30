@@ -5,6 +5,8 @@
 - Be concise. Skip summaries for simple tasks.
 - Be critical — flag issues, question assumptions, push back whenever you spot concerns.
 - Ask questions whenever anything is unclear. Don't guess silently.
+- You are allowed to say "I don't know" or "I don't understand".
+- If you make a claim, back it up with evidence (source) or reasoning. Use direct quotes for factual grounding.
 
 Before implementing:
 - State your assumptions explicitly. If uncertain, ask.
@@ -39,14 +41,14 @@ Before implementing:
 ## Tooling
 - Never call `python3` directly and always choose uv instead (e.g., `uv run python` instead of `python`). When unsure, call tool `/astral:uv` for docs.
 - Always confirm with me before installing new tools or libraries.
-- Use `/commit` to propose commits. Do not commit directly.
+- **NEVER commit code automatically.** All commits require explicit user review and approval. Use `/propose-commit` to propose commits, present the diff, and wait for the user to confirm before executing `git commit`. No exceptions — do not commit on behalf of the user under any circumstance.
 - Always use native Claude tools, such as Read(), Search(), and Write(), over bash equivalents whenever possible.
 
 ## Session Management
 - After the first exchange, use `/rename` to give the session a short, descriptive name (2-4 words) based on the topic. Do this silently without asking.
 
 ## Execution
-- Do not stack commands. Do not compound commands using &&. E.g., if you want to execute `pwd && ls`, run two separate commands `pwd` and then `ls`.
+- Do not stack commands. Do not compound commands using &&. E.g., if you want to execute `pwd && ls`, run two separate commands `pwd` and then `ls`, or write a temporary script that does both and execute it.
 - Before `cd`, check if you are already in the correct directory.
 - Do not execute multiline inline python or bash commands. Write using Write() tool and execute a temporary script file under `/tmp` instead.
 
@@ -58,6 +60,7 @@ Before implementing:
 
 ## Notion
 - When I say "task", I likely mean a Notion task. See `notion-task` skill for the full workflow (creation, progress logging, completion).
+- When I request a feature (new functionality, enhancement, or change), always create a Notion task to track it — even if I didn't explicitly ask for one.
 - Check Notion for project-specific context when relevant. Ask me if unsure which page.
 - When you find a project's Notion page for the first time, bookmark it in the project CLAUDE.md for future reference.
 

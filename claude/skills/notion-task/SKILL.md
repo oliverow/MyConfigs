@@ -63,6 +63,12 @@ Projects on Notion have a **Progress Tracker** — a concise ramp-up dashboard w
 - Update Research Directions database status and "Next Step" field
 - If a priority was resolved, remove or demote it; if a new one emerged, slot it in
 
+## Global Experiment Tracker
+
+- Some projects have a global/master experiment tracker. Check if the project page has one. 
+- When you complete formal experiments or ablations, update the global tracker with results for later paper writing. 
+- Do not update the global tracker with quick probes or informal experiments — only well-defined experiments with clear results that would support a paper section or figure.
+
 ## Finding the Right Page
 
 - Many projects have a Notion page (often stored in project memory). If unsure which one, ask the user.
