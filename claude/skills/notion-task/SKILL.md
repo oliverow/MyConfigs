@@ -69,6 +69,10 @@ Projects on Notion have a **Progress Tracker** — a concise ramp-up dashboard w
 - When you complete formal experiments or ablations, update the global tracker with results for later paper writing. 
 - Do not update the global tracker with quick probes or informal experiments — only well-defined experiments with clear results that would support a paper section or figure.
 
+## Output After Edits
+
+After every Notion page creation or modification, always output the **name/title** and **Notion link** of the page you just created or edited (e.g., "Updated: [Task Name](notion-url)"). This applies to tasks, tracker pages, experiment trackers, and any other Notion page.
+
 ## Finding the Right Page
 
 - Many projects have a Notion page (often stored in project memory). If unsure which one, ask the user.
