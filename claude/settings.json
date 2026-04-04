@@ -40,6 +40,7 @@
       "Skill",
       "mcp__claude_ai_Notion__*",
       "mcp__claude_ai_Hugging_Face__*",
+	  "mcp__claude_ai_Slack__*",
       "mcp__plugin_discord_discord__reply",
       "Bash(/home/oliver/.claude/scripts/ntfy-notify.sh *)"
     ],
@@ -60,7 +61,8 @@
     ],
     "defaultMode": "acceptEdits",
     "additionalDirectories": [
-      "/tmp/"
+      "/tmp/",
+      "/Users/oliverwang/agent_brain"
     ]
   },
   "hooks": {
@@ -71,6 +73,15 @@
           {
             "type": "command",
             "command": "bash ~/.claude/scripts/fix-mcp-gate.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'count=$(find ~/agent_brain/00-inbox -name \"*.md\" -not -name \"_*\" 2>/dev/null | wc -l | tr -d \" \"); if [ \"$count\" -gt 0 ]; then echo \"{\\\"message\\\": \\\"Brain inbox: $count item(s) pending\\\"}\"; fi'"
           }
         ]
       }

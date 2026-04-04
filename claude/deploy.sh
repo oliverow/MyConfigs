@@ -7,7 +7,7 @@
 #   agents/code-reviewer.md  agents/researcher-analyst.md
 #   scripts/fix-mcp-gate.sh  scripts/claude-notify.sh  scripts/ntfy-notify.sh
 #   skills/gpu-management/SKILL.md  skills/notion-task/SKILL.md  skills/update-context/SKILL.md
-#   commands/devlog.md  commands/propose-commit.md  commands/queue-notify.md  commands/wrapup.md
+#   commands/devlog.md  commands/propose-commit.md  commands/queue-notify.md  commands/wrapup.md  commands/braindump.md
 #   .claude/commands/commit-setup.md
 #
 # To update this repo after editing ~/.claude:
@@ -17,7 +17,7 @@
 #   cp ~/.claude/skills/gpu-management/SKILL.md ~/.myconfig/claude/skills/gpu-management/
 #   cp ~/.claude/skills/notion-task/SKILL.md ~/.myconfig/claude/skills/notion-task/
 #   cp ~/.claude/skills/update-context/SKILL.md ~/.myconfig/claude/skills/update-context/
-#   cp ~/.claude/commands/{devlog.md,propose-commit.md,queue-notify.md,wrapup.md} ~/.myconfig/claude/commands/
+#   cp ~/.claude/commands/{devlog.md,propose-commit.md,queue-notify.md,wrapup.md,braindump.md} ~/.myconfig/claude/commands/
 #   cp ~/.claude/.claude/commands/commit-setup.md ~/.myconfig/claude/.claude/commands/
 set -euo pipefail
 
@@ -29,7 +29,7 @@ mkdir -p "$BACKUP/agents" "$BACKUP/scripts" "$BACKUP/skills/gpu-management" "$BA
 mkdir -p "$DEST/agents" "$DEST/scripts" "$DEST/skills/gpu-management" "$DEST/skills/notion-task" "$DEST/skills/update-context" "$DEST/commands" "$DEST/.claude/commands"
 
 FILES="settings.json keybindings.json CLAUDE.md statusline-command.sh"
-NESTED="agents/code-reviewer.md agents/researcher-analyst.md scripts/fix-mcp-gate.sh scripts/claude-notify.sh scripts/ntfy-notify.sh skills/gpu-management/SKILL.md skills/notion-task/SKILL.md skills/update-context/SKILL.md commands/devlog.md commands/propose-commit.md commands/queue-notify.md commands/wrapup.md .claude/commands/commit-setup.md"
+NESTED="agents/code-reviewer.md agents/researcher-analyst.md scripts/fix-mcp-gate.sh scripts/claude-notify.sh scripts/ntfy-notify.sh skills/gpu-management/SKILL.md skills/notion-task/SKILL.md skills/update-context/SKILL.md commands/devlog.md commands/propose-commit.md commands/queue-notify.md commands/wrapup.md commands/braindump.md .claude/commands/commit-setup.md"
 
 for f in $FILES $NESTED; do
   [ -f "$DEST/$f" ] && cp "$DEST/$f" "$BACKUP/$f"
