@@ -45,7 +45,7 @@ Before implementing:
 - Always use native Claude tools, such as Read(), Search(), and Write(), over bash equivalents whenever possible.
 
 ## Session Management
-- After the first exchange, use `/rename` to give the session a short, descriptive name (2-4 words) based on the topic. Do this silently without asking.
+- After the first exchange, use `/rename` to give the session a short, descriptive name (2-4 words) based on the topic. Do this silently without asking. Don't start nested sessions by `claude /rename`; just use `/rename` in the current session.
 
 ## Execution
 - Do not stack commands. Do not compound commands using &&. E.g., if you want to execute `pwd && ls`, run two separate commands `pwd` and then `ls`, or write a temporary script that does both and execute it.
@@ -69,6 +69,6 @@ Before implementing:
 
 ## Devlog
 - After completing tasks, consider using `/devlog` to log bugs fixed, decisions, and design choices.
-- Check `.claude/DEVLOG.md` for prior context before starting work.
+- Devlog lives on Notion (child page "Devlog" under each project page).
 
 # Make sure you memorize each one of these preferences!
