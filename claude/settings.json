@@ -1,8 +1,7 @@
 {
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-    "CLAUDE_CODE_NO_FLICKER": "1",
-    "CLAUDE_CODE_EFFORT_LEVEL": "auto"
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "95"
   },
   "permissions": {
     "allow": [
@@ -42,6 +41,8 @@
       "Skill",
       "mcp__claude_ai_Notion__*",
       "mcp__claude_ai_Hugging_Face__*",
+      "mcp__claude_ai_Slack__*",
+      "mcp__claude_ai_Granola__*",
       "mcp__plugin_discord_discord__reply",
       "Bash(/home/oliver/.claude/scripts/ntfy-notify.sh *)"
     ],

@@ -11,11 +11,15 @@ Ensure all context sources are up-to-date after changes. Run through each source
 ## Context Sources
 
 ### 1. Notion Task
-If a Notion task is active for the current work:
+Check whether a Notion task exists for the current work. Use the `notion-task` skill or Notion search tools to look for a matching task — do NOT assume one doesn't exist without searching first.
+
+If a Notion task is found:
 - Update **status** (In Progress, Verify, etc.)
 - Log **progress** — blockers, decisions, approach changes, surprising results
 - On completion, add a **summary comment** and set status to "Verify"
 - Assess whether changes shift the project narrative — if so, update the **project tracker** (see `notion-task` skill, "Project Tracker Updates" section)
+
+If no matching task is found after searching, say so explicitly (e.g., "Searched Notion — no matching task found for this work").
 
 ### 2. Devlog
 If any of these occurred, invoke `/devlog`:
